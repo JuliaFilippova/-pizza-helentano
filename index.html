@@ -799,7 +799,8 @@
 	</footer>
 	<!-- МОДАЛЬНОЕ ОКНО ДЛЯ ОПИССАНИЯ ПРОДУКТА -->
 	<div class="modal-window modal-product-desc">
-		<div class="modal-window_body modal-product-desc__body">
+		<div class="modal-window__body modal-product-desc__body">
+			<div class="close close-modal"></div>
 			<div class="modal-product-desc__box">
 				<div class="modal-product-desc__img">
 					<img src="img/test1.jpg" alt="Изображение">
@@ -820,23 +821,215 @@
 						</p>
 					</div>
 					<div class="product-desc-info__centimeters-wrap">
-						<span class="product-desc-info__centimeter">
+						<span class="product-desc-info__centimeter active-tab">
+							<i class="check"></i>
 							30 см
 						</span>
 						<span class="product-desc-info__centimeter">
+							<!-- <i class="check"></i> -->
 							45 см
 						</span>
 					</div>
 				</div>
 			</div>
-			<div class="modal-product-desc__box">
-
+			<div class="modal-product-desc__box modal-product-desc__box_border">
+				<div class="modal-addit-products">
+					<span class="modal-addit-products__title">
+						Ингредиенты
+					</span>
+					<div class="modal-addit-products__list-wrap">
+						<ul class="modal-addit-products__list modal-addit-products__list_col1">
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Руккола 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Маслины 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Оливки 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Бекон 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Перец “Чили” 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Сыр 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+						</ul>
+						<ul class="modal-addit-products__list modal-addit-products__list_col2">
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Руккола 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Маслины 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Оливки 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Бекон 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Перец “Чили” 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+							<li class="modal-addit-products__item">
+								<div class="modal-addit-products__quantity">
+									<span class="minus"> <i>-</i> </span>
+									<span class="number">0</span>
+									<span class="plus"> <i>+</i> </span>
+								</div>
+								Сыр 20 гр
+								<span class="addit-products-price">+ 20 ₽</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-addit-products">
+					<span class="modal-addit-products__title">
+						Напитки
+					</span>
+					<ul class="modal-addit-products__list">
+						<li class="modal-addit-products__item">
+							<div class="modal-addit-products__quantity">
+								<span class="minus"> <i>-</i> </span>
+								<span class="number">0</span>
+								<span class="plus"> <i>+</i> </span>
+							</div>
+							Сoca-Cola 0,5 л
+							<span class="addit-products-price">+ 120 ₽</span>
+						</li>
+						<li class="modal-addit-products__item">
+							<div class="modal-addit-products__quantity">
+								<span class="minus"> <i>-</i> </span>
+								<span class="number">0</span>
+								<span class="plus"> <i>+</i> </span>
+							</div>
+							Fanta 0,5 л
+							<span class="addit-products-price">+ 120 ₽</span>
+						</li>
+						<li class="modal-addit-products__item">
+							<div class="modal-addit-products__quantity">
+								<span class="minus"> <i>-</i> </span>
+								<span class="number">0</span>
+								<span class="plus"> <i>+</i> </span>
+							</div>
+							Sprite 0,5 л
+							<span class="addit-products-price">+ 120 ₽</span>
+						</li>
+						<li class="modal-addit-products__item">
+							<div class="modal-addit-products__quantity">
+								<span class="minus"> <i>-</i> </span>
+								<span class="number">0</span>
+								<span class="plus"> <i>+</i> </span>
+							</div>
+							Холодное пиво 0,5 л
+							<span class="addit-products-price">+ 120 ₽</span>
+						</li>
+						<li class="modal-addit-products__item">
+							<div class="modal-addit-products__quantity">
+								<span class="minus"> <i>-</i> </span>
+								<span class="number">0</span>
+								<span class="plus"> <i>+</i> </span>
+							</div>
+							Молочный коктейль 1,0 л
+							<span class="addit-products-price">+ 120 ₽</span>
+						</li>
+						<li class="modal-addit-products__item">
+							<div class="modal-addit-products__quantity">
+								<span class="minus"> <i>-</i> </span>
+								<span class="number">0</span>
+								<span class="plus"> <i>+</i> </span>
+							</div>
+							Глинтвейн 0,45 л
+							<span class="addit-products-price">+ 120 ₽</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-product-desc__box modal-product-desc__box_amount">
+				<div class="amount-block">
+					<span class="under-record">Итого:</span>
+					<span class="amount">790 ₽</span>
+				</div>
+				<div class="amount-btn-block">
+					<div class="modal-addit-products__quantity">
+						<span class="minus"> <i>—</i> </span>
+						<span class="number">0</span>
+						<span class="plus"> <i>+</i> </span>
+					</div>
+					<button class="btn btn-active">Добавлено в корзину</button>
+				</div>
 			</div>
 		</div>
 	</div>
-
-
-
 
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<!-- <script src="js/jquery.maskedinput.js"></script> -->

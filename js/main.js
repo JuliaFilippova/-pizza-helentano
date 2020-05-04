@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
+
+
+});
 $(document).ready(function () {
     $('.header-banner-slick').slick({
         dots: true,
