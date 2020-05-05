@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2">
-                        <a href="#" class="brand">
+                        <a href="index.html" class="brand">
                             <img src="img/cropped-pizza-celentano1-min.png" alt="Логотип">
                         </a>
                     </div>
@@ -49,17 +49,17 @@
                         <nav class="navigation">
                             <ul class="menu-list">
                                 <li>
-                                    <a href="#">
+                                    <a href="#deliveryInfo" data-scroll>
                                         Как оформить заказ?
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="color-green">
+                                    <a href="page-about.html" class="color-green">
                                         О нас
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#contactsInfo" data-scroll>
                                         Контакты
                                     </a>
                                 </li>
@@ -74,12 +74,12 @@
                         <div class="page-data">
                             <ul class="data-link">
                                 <li>
-                                    <a href="#">
+                                    <a href="https://vk.com/celentanodonetsk" target="_blank">
                                         Группа Вконтакте
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.instagram.com/chelentanodonetsk/" target="_blank">
                                         Инстаграм
                                     </a>
                                 </li>
@@ -95,10 +95,10 @@
                                     </div>
                                 </div>
                                 <div class="data-atributes__block">
-                                    <div class="icon-basket icon-click">
+                                    <a href="page-form.html" class="icon-basket icon-click">
                                         <img src="img/Group2.svg" alt="Иконка">
                                         <span class="icon-basket_quantity"> 0 </span>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                     </a>
                 </div>
             </div>
-            <div class="delivery-info about-block">
+            <div class="delivery-info about-block" id="deliveryInfo">
                 <h2 class="section-title section-title_start">Доставка и оплата</h2>
                 <p class="text">
                     Доставка осуществляется опытными курьерами, которые доставят Ваш заказ в удобное для Вас место и
@@ -168,7 +168,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="contacts-info about-block">
+            <div class="contacts-info about-block" id="contactsInfo">
                 <h2 class="section-title section-title_start">Наши адреса</h2>
                 <div class="row align-items-center">
                     <div class="col-md-4 col-sm-5">
@@ -195,9 +195,7 @@
                     </div>
                     <div class="col-md-8 col-sm-7">
                         <div class="map">
-                            <iframe
-                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A6a8bbb978c51898afd590bea1a467bac4a3ecd6eb9a1b34fe5eb467b5f0beeef&amp;source=constructor"
-                                frameborder="0"></iframe>
+                            <iframe id="map" src="img/map.png" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -209,7 +207,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="brand-box">
-                        <a href="#" class="brand">
+                        <a href="index.html" class="brand">
                             <img src="img/cropped-pizza-celentano1-min.png" alt="Логотип">
                         </a>
                         <span class="brand-slogan under-record under-record_center">Доставка пиццы и суши в

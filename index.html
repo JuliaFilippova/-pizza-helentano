@@ -39,7 +39,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-2">
-						<a href="#" class="brand">
+						<a href="index.html" class="brand">
 							<img src="img/cropped-pizza-celentano1-min.png" alt="Логотип">
 						</a>
 					</div>
@@ -47,17 +47,17 @@
 						<nav class="navigation">
 							<ul class="menu-list">
 								<li>
-									<a href="#">
+									<a href="page-about.html#deliveryInfo">
 										Как оформить заказ?
 									</a>
 								</li>
 								<li>
-									<a href="#" class="color-green">
+									<a href="page-about.html" class="color-green">
 										О нас
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="page-about.html#contactsInfo">
 										Контакты
 									</a>
 								</li>
@@ -72,12 +72,12 @@
 						<div class="page-data">
 							<ul class="data-link">
 								<li>
-									<a href="#">
+									<a href="https://vk.com/celentanodonetsk" target="_blank">
 										Группа Вконтакте
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="https://www.instagram.com/chelentanodonetsk/" target="_blank">
 										Инстаграм
 									</a>
 								</li>
@@ -93,10 +93,10 @@
 									</div>
 								</div>
 								<div class="data-atributes__block">
-									<div class="icon-basket icon-click">
+									<a href="page-form.html" class="icon-basket icon-click">
 										<img src="img/Group2.svg" alt="Иконка">
 										<span class="icon-basket_quantity"> 0 </span>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -255,10 +255,17 @@
 						</div>
 						<div class="col-lg-3">
 							<div class="type-product__sort-wrap">
-								<button class="type-product__sort">
+								<!-- <button class="type-product__sort">
 									<img src="img/orientation1.svg" alt="">
 									<span>По умолчанию</span>
-								</button>
+								</button> -->
+								<div class="select">
+									<select name="select" class="type-product__sort">
+										<option value="value1" selected>По умолчанию</option>
+										<option value="value2">Новинки</option>
+										<option value="value3">Акции</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -536,7 +543,7 @@
 							</div>
 						</div>
 						<div class="col-lg-3">
-							<div class="basket-goods">
+							<div class="basket-goods basket-goods_absolut">
 								<div class="empty-basket d-none">
 									<img src="img/pizza-min.png" alt="">
 									<h5>Ваша корзина пуста!</h5>
@@ -553,7 +560,7 @@
 											<li class="selected-item">
 												<!-- картинка продукта -->
 												<div class="selected-item__img">
-													<img src="img/Ellipse3.png" alt="">
+													<img src="img/Ellipse1-min.png" alt="">
 												</div>
 												<div class="selected-item__info">
 													<!-- название продукта -->
@@ -602,7 +609,7 @@
 											<li class="selected-item">
 												<!-- картинка продукта -->
 												<div class="selected-item__img">
-													<img src="img/Ellipse3.png" alt="">
+													<img src="img/Ellipse1-min.png" alt="">
 												</div>
 												<div class="selected-item__info">
 													<!-- название продукта -->
@@ -626,7 +633,7 @@
 											<li class="selected-item">
 												<!-- картинка продукта -->
 												<div class="selected-item__img">
-													<img src="img/Ellipse3.png" alt="">
+													<img src="img/Ellipse1-min.png" alt="">
 												</div>
 												<div class="selected-item__info">
 													<!-- название продукта -->
@@ -649,7 +656,7 @@
 											</li>
 										</ul>
 									</div>
-									<button class="order-goods btn btn-active">Оформить заказ</button>
+									<a href="page-form.html" class="order-goods btn btn-active">Оформить заказ</a>
 								</div>
 							</div>
 						</div>
@@ -683,7 +690,7 @@
 			<div class="row">
 				<div class="col-lg-2">
 					<div class="brand-box">
-						<a href="#" class="brand">
+						<a href="index.html" class="brand">
 							<img src="img/cropped-pizza-celentano1-min.png" alt="Логотип">
 						</a>
 						<span class="brand-slogan under-record under-record_center">Доставка пиццы и суши в
@@ -805,7 +812,7 @@
 			<div class="close close-modal"></div>
 			<div class="modal-product-desc__box">
 				<div class="modal-product-desc__img">
-					<img src="img/test1.jpg" alt="Изображение">
+					<img src="img/Ellipse1-2-min.png" alt="Изображение">
 				</div>
 				<div class="product-desc-info">
 					<h2>Пепперони острая</h2>
@@ -1032,7 +1039,15 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="modal-window modal-message-sent">
+		<div class="modal-window__body modal-message-sent__body">
+			<h5>Спасибо что выбрали нас!</h5>
+			<span class="your-order">Ваш заказ №1267</span>
+			<img src="img/cooking1.svg" alt="Изображение">
+			<span class="modal-text">Наш оператор доставки свяжется с Вами в ближайшее время!</span>
+			<a href="index.html" class="btn btn-active">Вернуться на главную</a>
+		</div>
+	</div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<!-- <script src="js/jquery.maskedinput.js"></script> -->
 	<script src="js/slick.min.js"></script>

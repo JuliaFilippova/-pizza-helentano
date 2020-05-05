@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2">
-                        <a href="#" class="brand">
+                        <a href="index.html" class="brand">
                             <img src="img/cropped-pizza-celentano1-min.png" alt="Логотип">
                         </a>
                     </div>
@@ -48,17 +48,17 @@
                         <nav class="navigation">
                             <ul class="menu-list">
                                 <li>
-                                    <a href="#">
+                                    <a href="page-about.html#deliveryInfo">
                                         Как оформить заказ?
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="color-green">
+                                    <a href="page-about.html" class="color-green">
                                         О нас
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="page-about.html#contactsInfo">
                                         Контакты
                                     </a>
                                 </li>
@@ -73,12 +73,12 @@
                         <div class="page-data">
                             <ul class="data-link">
                                 <li>
-                                    <a href="#">
+                                    <a href="https://vk.com/celentanodonetsk" target="_blank">
                                         Группа Вконтакте
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.instagram.com/chelentanodonetsk/" target="_blank">
                                         Инстаграм
                                     </a>
                                 </li>
@@ -94,10 +94,10 @@
                                     </div>
                                 </div>
                                 <div class="data-atributes__block">
-                                    <div class="icon-basket icon-click">
+                                    <a href="page-form.html" class="icon-basket icon-click">
                                         <img src="img/Group2.svg" alt="Иконка">
                                         <span class="icon-basket_quantity"> 0 </span>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
     <section class="make-order">
         <div class="container">
             <div class="row">
-                <div class="col-lg-offset-1 col-lg-6">
+                <div class="col-lg-6">
                     <h2 class="section-title section-title_start">Оформление заказа</h2>
                     <div class="make-order-wrap">
                         <ul class="make-order-content__tabs">
@@ -122,151 +122,307 @@
                         </ul>
                         <div class="make-order-tabscontents">
                             <div class="make-order-tabcontent active" id="tabDelivery">
-                                <form action="#" class="form-delivery" id="formDelivery">
+                                <form action="#" class="form form-delivery" id="formDelivery">
+                                    <div class="form-box">
+                                        <div class="head-form">
+                                            <img src="img/icon-location.svg" class="icon" alt="">
+                                            <h5>Адрес доставки</h5>
+                                        </div>
+                                        <input type="text" class="input" placeholder="Введите адрес доставки">
+                                        <div class="input-row flex input-row_numbers">
+                                            <input type="text" class="input" placeholder="№ подъезда">
+                                            <input type="text" class="input" placeholder="Код домофона">
+                                            <input type="text" class="input" placeholder="Этаж">
+                                            <input type="text" class="input" placeholder="Квартира/Офис">
+                                        </div>
+                                    </div>
+                                    <div class="form-box">
+                                        <div class="head-form">
+                                            <img src="img/bubble-speech1.svg" class="icon" alt="">
+                                            <h5>Контактные данные</h5>
+                                        </div>
+                                        <div class="input-row flex input-row_contacts">
+                                            <input type="text" class="input" placeholder="Ваше имя">
+                                            <input type="text" class="input" placeholder="Номер телефона">
+                                        </div>
+                                        <div class="input-row flex input-row_contacts">
+                                            <input type="text" class="input" placeholder="Ваш адрес элетронной почты">
+                                            <span class="flex align-items-center form-pointer">
+                                                <img src="img/attention.svg" class="icon" alt="">
+                                                <p>На указанный e-mail вам прийдет чек!</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-box">
+                                        <div class="head-form">
+                                            <img src="img/tools-and-utensils1.svg" class="icon" alt="">
+                                            <h5>Количество приборов</h5>
+                                        </div>
+                                        <ul class="form-addit-products__list">
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Палочки
+                                            </li>
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Вилки
+                                            </li>
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Ложки
+                                            </li>
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Трубочки
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <div class="head-form">
-                                        <img src="img/icon-location.svg" alt="">
-                                        <h5>Адрес доставки</h5>
+                                        <img src="img/sms.svg" class="icon" alt="">
+                                        <h5>Комментарий к заказу</h5>
                                     </div>
-                                    <input type="text" class="input">
-                                    <div class="input-row">
-                                        <input type="text" class="input">
-                                        <input type="text" class="input">
-                                        <input type="text" class="input">
-                                        <input type="text" class="input">
-                                    </div>
-                                    <div class="head-form">
-                                        <img src="img/bubble-speech1.svg" alt="">
-                                        <h5>Контактные данные</h5>
-                                    </div>
-                                    <div class="input-row">
-                                        <input type="text" class="input">
-                                        <input type="text" class="input">
-                                    </div>
-                                    <div class="input-row">
-                                        <input type="text" class="input">
-                                        <p>
-                                            <img src="img/attention.svg" alt="">
-                                            На указанный e-mail вам прийдет чек!
-                                        </p>
-                                    </div>
+                                    <textarea name="message" id="message" class="input"
+                                        placeholder="Комментарий"></textarea>
                                 </form>
                             </div>
                             <div class="make-order-tabcontent" id="tabPickup">
-                                <form action="#" class="form-pickup" id="formPickup">
-
+                                <form action="#" class="form form-pickup" id="formPickup">
+                                    <div class="form-box">
+                                        <div class="head-form">
+                                            <img src="img/icon-location.svg" class="icon" alt="">
+                                            <h5>Адреса ресторанов</h5>
+                                        </div>
+                                        <div class="radio-btn-wrap flex">
+                                            <label class="container-radio">пр. Богдана-Хмельницкого, 92 с 10:00 до 20:00
+                                                <input type="radio" checked="checked" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-radio">бул. Шевченко, 48 с 10:00 до 20:00
+                                                <input type="radio" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-radio">ул. Артема, 277 с 10:00 до 18:00
+                                                <input type="radio" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-box">
+                                        <div class="head-form">
+                                            <img src="img/bubble-speech1.svg" class="icon" alt="">
+                                            <h5>Контактные данные</h5>
+                                        </div>
+                                        <div class="input-row flex input-row_contacts">
+                                            <input type="text" class="input" placeholder="Ваше имя">
+                                            <input type="text" class="input" placeholder="Номер телефона">
+                                        </div>
+                                        <div class="input-row flex input-row_contacts">
+                                            <input type="text" class="input" placeholder="Ваш адрес элетронной почты">
+                                            <span class="flex align-items-center form-pointer">
+                                                <img src="img/attention.svg" class="icon" alt="">
+                                                <p>На указанный e-mail вам прийдет чек!</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-box">
+                                        <div class="head-form">
+                                            <img src="img/tools-and-utensils1.svg" class="icon" alt="">
+                                            <h5>Количество приборов</h5>
+                                        </div>
+                                        <ul class="form-addit-products__list">
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Палочки
+                                            </li>
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Вилки
+                                            </li>
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Ложки
+                                            </li>
+                                            <li class="form-addit-products__item">
+                                                <div class="form-addit-products__quantity">
+                                                    <span class="minus"> <i>-</i> </span>
+                                                    <span class="number">0</span>
+                                                    <span class="plus"> <i>+</i> </span>
+                                                </div>
+                                                Трубочки
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="head-form">
+                                        <img src="img/sms.svg" class="icon" alt="">
+                                        <h5>Комментарий к заказу</h5>
+                                    </div>
+                                    <textarea name="message" id="message" class="input"
+                                        placeholder="Комментарий"></textarea>
                                 </form>
                             </div>
+                            <a href="index.html" class="link-back">
+                                Вернуться в меню
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="full-basket">
-                        <div class="full-basket__content">
-                            <div class="full-basket__title mini-headline">
-                                Ваш заказ
+                <div class="offset-lg-1 col-lg-5">
+                    <div class="basket-goods basket-goods_make-order">
+                        <div class="full-basket">
+                            <div class="full-basket__content">
+                                <div class="full-basket__title mini-headline">
+                                    Ваш заказ
+                                </div>
+                                <ul class="selected-items-wrap">
+                                    <!-- один выбранный продукт -->
+                                    <li class="selected-item">
+                                        <!-- картинка продукта -->
+                                        <div class="selected-item__img">
+                                            <img src="img/Ellipse1-min.png" alt="">
+                                        </div>
+                                        <div class="selected-item__info">
+                                            <!-- название продукта -->
+                                            <div class="selected-item__name mini-headline">
+                                                Пепперони острая
+                                            </div>
+                                            <!-- дополнительное описание продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__size">30 см</span> + <span
+                                                    class="selected-item__add">Доп.
+                                                    ингредиенты</span>
+                                            </div>
+                                            <!-- кол-во и цена продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__quantity">x1</span>
+                                                <span class="selected-item__price">590 ₽</span>
+                                            </div>
+                                        </div>
+                                        <div class="close-delete close"></div>
+                                    </li>
+                                    <li class="selected-item">
+                                        <!-- картинка продукта -->
+                                        <div class="selected-item__img">
+                                            <img src="file:///D:/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%D1%8B/pizza-helentano/img/test1.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="selected-item__info">
+                                            <!-- название продукта -->
+                                            <div class="selected-item__name mini-headline">
+                                                Пепперони острая
+                                            </div>
+                                            <!-- дополнительное описание продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__size">30 см</span> + <span
+                                                    class="selected-item__add">Доп.
+                                                    ингредиенты</span>
+                                            </div>
+                                            <!-- кол-во и цена продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__quantity">x1</span>
+                                                <span class="selected-item__price">590 ₽</span>
+                                            </div>
+                                        </div>
+                                        <div class="close-delete close"></div>
+                                    </li>
+                                    <li class="selected-item">
+                                        <!-- картинка продукта -->
+                                        <div class="selected-item__img">
+                                            <img src="img/Ellipse1-min.png" alt="">
+                                        </div>
+                                        <div class="selected-item__info">
+                                            <!-- название продукта -->
+                                            <div class="selected-item__name mini-headline">
+                                                Пепперони острая
+                                            </div>
+                                            <!-- дополнительное описание продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__size">30 см</span> + <span
+                                                    class="selected-item__add">Доп.
+                                                    ингредиенты</span>
+                                            </div>
+                                            <!-- кол-во и цена продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__quantity">x1</span>
+                                                <span class="selected-item__price">590 ₽</span>
+                                            </div>
+                                        </div>
+                                        <div class="close-delete close"></div>
+                                    </li>
+                                    <li class="selected-item">
+                                        <!-- картинка продукта -->
+                                        <div class="selected-item__img">
+                                            <img src="img/Ellipse1-min.png" alt="">
+                                        </div>
+                                        <div class="selected-item__info">
+                                            <!-- название продукта -->
+                                            <div class="selected-item__name mini-headline">
+                                                Пепперони острая
+                                            </div>
+                                            <!-- дополнительное описание продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__size">30 см</span> + <span
+                                                    class="selected-item__add">Доп.
+                                                    ингредиенты</span>
+                                            </div>
+                                            <!-- кол-во и цена продукта -->
+                                            <div class="selected-item__desc">
+                                                <span class="selected-item__quantity">x1</span>
+                                                <span class="selected-item__price">590 ₽</span>
+                                            </div>
+                                        </div>
+                                        <div class="close-delete close"></div>
+                                    </li>
+                                </ul>
+                                <div class="select-payment">
+                                    <h5>Выберите варианты оплаты</h5>
+                                    <div class="radio-btn-wrap flex">
+                                        <label class="container-radio">При получении
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container-radio">Онлайн на сайте
+                                            <input type="radio" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="make-order-submit">
+                                    <div class="amount-block">
+                                        <span class="under-record">Итого:</span>
+                                        <span class="amount">790 ₽</span>
+                                    </div>
+                                    <button class="btn btn-active">Оформить заказ</button>
+                                </div>
                             </div>
-                            <ul class="selected-items-wrap">
-                                <!-- один выбранный продукт -->
-                                <li class="selected-item">
-                                    <!-- картинка продукта -->
-                                    <div class="selected-item__img">
-                                        <img src="img/Ellipse3.png" alt="">
-                                    </div>
-                                    <div class="selected-item__info">
-                                        <!-- название продукта -->
-                                        <div class="selected-item__name mini-headline">
-                                            Пепперони острая
-                                        </div>
-                                        <!-- дополнительное описание продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__size">30 см</span> + <span
-                                                class="selected-item__add">Доп.
-                                                ингредиенты</span>
-                                        </div>
-                                        <!-- кол-во и цена продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__quantity">x1</span>
-                                            <span class="selected-item__price">590 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="close-delete close"></div>
-                                </li>
-                                <li class="selected-item">
-                                    <!-- картинка продукта -->
-                                    <div class="selected-item__img">
-                                        <img src="file:///D:/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%D1%8B/pizza-helentano/img/test1.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="selected-item__info">
-                                        <!-- название продукта -->
-                                        <div class="selected-item__name mini-headline">
-                                            Пепперони острая
-                                        </div>
-                                        <!-- дополнительное описание продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__size">30 см</span> + <span
-                                                class="selected-item__add">Доп.
-                                                ингредиенты</span>
-                                        </div>
-                                        <!-- кол-во и цена продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__quantity">x1</span>
-                                            <span class="selected-item__price">590 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="close-delete close"></div>
-                                </li>
-                                <li class="selected-item">
-                                    <!-- картинка продукта -->
-                                    <div class="selected-item__img">
-                                        <img src="img/Ellipse3.png" alt="">
-                                    </div>
-                                    <div class="selected-item__info">
-                                        <!-- название продукта -->
-                                        <div class="selected-item__name mini-headline">
-                                            Пепперони острая
-                                        </div>
-                                        <!-- дополнительное описание продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__size">30 см</span> + <span
-                                                class="selected-item__add">Доп.
-                                                ингредиенты</span>
-                                        </div>
-                                        <!-- кол-во и цена продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__quantity">x1</span>
-                                            <span class="selected-item__price">590 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="close-delete close"></div>
-                                </li>
-                                <li class="selected-item">
-                                    <!-- картинка продукта -->
-                                    <div class="selected-item__img">
-                                        <img src="img/Ellipse3.png" alt="">
-                                    </div>
-                                    <div class="selected-item__info">
-                                        <!-- название продукта -->
-                                        <div class="selected-item__name mini-headline">
-                                            Пепперони острая
-                                        </div>
-                                        <!-- дополнительное описание продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__size">30 см</span> + <span
-                                                class="selected-item__add">Доп.
-                                                ингредиенты</span>
-                                        </div>
-                                        <!-- кол-во и цена продукта -->
-                                        <div class="selected-item__desc">
-                                            <span class="selected-item__quantity">x1</span>
-                                            <span class="selected-item__price">590 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="close-delete close"></div>
-                                </li>
-                            </ul>
                         </div>
-                        <button class="order-goods btn btn-active">Оформить заказ</button>
                     </div>
                 </div>
             </div>
@@ -277,7 +433,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="brand-box">
-                        <a href="#" class="brand">
+                        <a href="index.html" class="brand">
                             <img src="img/cropped-pizza-celentano1-min.png" alt="Логотип">
                         </a>
                         <span class="brand-slogan under-record under-record_center">Доставка пиццы и суши в
