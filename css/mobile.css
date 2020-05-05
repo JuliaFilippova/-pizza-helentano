@@ -1,0 +1,99 @@
+/* MEDIA QUERIES =============================== */
+/*-- 1200-1280px col-xl --*/
+@media screen and (max-width: 1280px) {
+    /* PAGE - INDEX ======================= */
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - ABOUT ======================= */
+
+
+
+
+
+
+    /* PAGE - ABOUT - END ======================= */
+
+    /* PAGE - FORM ======================= */
+    /* PAGE - FORM - END ======================= */
+}
+
+/*-- 993-1200px col-lg --*/
+@media screen and (max-width: 1200px) {
+    /* PAGE - INDEX ======================= */
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - ABOUT ======================= */
+    /* PAGE - ABOUT - END ======================= */
+
+    /* PAGE - FORM ======================= */
+    /* PAGE - FORM - END ======================= */
+}
+
+/*-- 769-992px col-lg --*/
+@media screen and (max-width: 992px) {
+
+    /* PAGE - INDEX ======================= */
+    .container {
+        max-width: 95% !important;
+    }
+
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - ABOUT ======================= */
+    /* PAGE - ABOUT - END ======================= */
+
+    /* PAGE - FORM ======================= */
+    /* PAGE - FORM - END ======================= */
+}
+
+/*-- 576-768px col-lg --*/
+@media screen and (max-width: 768px) {
+
+    /* PAGE - INDEX ======================= */
+    .container {
+        max-width: 100% !important;
+    }
+
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - ABOUT ======================= */
+    /* PAGE - ABOUT - END ======================= */
+
+    /* PAGE - FORM ======================= */
+    /* PAGE - FORM - END ======================= */
+}
+
+/*-- 414-575px col-lg --*/
+@media screen and (max-width: 575px) {
+    /* PAGE - INDEX ======================= */
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - ABOUT ======================= */
+    .gallery a {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
+
+    .gallery a img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* PAGE - ABOUT - END ======================= */
+
+    /* PAGE - FORM ======================= */
+    /* PAGE - FORM - END ======================= */
+}
+
+/*-- 320-413px col-lg --*/
+@media screen and (max-width: 413px) {
+    /* PAGE - INDEX ======================= */
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - ABOUT ======================= */
+    /* PAGE - ABOUT - END ======================= */
+
+    /* PAGE - FORM ======================= */
+    /* PAGE - FORM - END ======================= */
+}

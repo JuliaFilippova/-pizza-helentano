@@ -1,5 +1,27 @@
 window.addEventListener('DOMContentLoaded', () => {
+    // TABS  make-order
+    const [tabs, tabsPanels] = [
+        Array.from(document.querySelectorAll(".make-order-tab")),
+        Array.from(document.querySelectorAll(".make-order-tabcontent"))
+    ];
 
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const target = document.querySelector(`#${tab.dataset.target}`);
+            removeActiveClass([tabs, tabsPanels]);
+            tab.classList.add("active");
+            target.classList.add("active");
+        });
+    });
+
+    const removeActiveClass = (el) => {
+        el.forEach((item) => {
+            item.find((e) => e.classList.contains("active")).classList.remove("active");
+        });
+    };
+
+    // лайтбокс галерея
+    lightGallery(document.getElementById('lightgallery'));
 
 });
 $(document).ready(function () {

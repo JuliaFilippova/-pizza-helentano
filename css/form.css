@@ -1,0 +1,40 @@
+/* PAGE - FORM ============================================*/
+.make-order-content__tabs {
+    display: flex;
+}
+
+.make-order-tab {
+    text-align: center;
+    cursor: pointer;
+    color: #445548;
+    border: 0.5px solid #CCCCCC;
+    width: 170px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    background: transparent;
+    margin-right: 20px;
+}
+
+.make-order-tab:hover {
+    color: #34B44A;
+    border: 0.5px solid #34B44A;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.make-order-tab.active {
+    color: #34B44A;
+    border: 0.5px solid #34B44A;
+}
+
+
+.make-order-tabscontents {}
+
+.make-order-tabcontent {
+    display: none;
+}
+
+.make-order-tabcontent.active {
+    display: block;
+}

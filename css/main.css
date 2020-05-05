@@ -10,6 +10,7 @@ body {
 	flex-direction: column;
 	display: flex;
 	transition: .5s;
+	overflow-x: hidden;
 }
 
 /* font-family: 'Roboto', sans-serif;
@@ -68,8 +69,6 @@ h4,
 h5,
 h6,
 .mini-headline {
-	/* padding: 0;
-	margin: 0; */
 	font-family: Rubik;
 	font-weight: 500;
 	color: #445548;
@@ -568,7 +567,7 @@ header {
 	padding: 40px 0 0;
 }
 
-.type-product .section-title {
+.section-title_start {
 	text-align: start;
 }
 
@@ -1254,37 +1253,3 @@ header {
 	border-radius: 20px;
 	background-color: #9d9d9d;
 }
-
-/* 
-::-webkit-scrollbar {
-	width: 10px;
-	height: 8px;
-	background-color: #D2D2D2;
-} */
-
-/* ползунок скроллбара */
-/* ::-webkit-scrollbar-thumb {
-	background-color: #F7F7F7;
-	border-radius: 9em;
-	box-shadow: inset 1px 1px 10px #f3faf7;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: #F2F2F2;
-} */
-
-/* MEDIA QUERIES =============================== */
-/*-- 992-1200px col-lg --*/
-@media screen and (max-width: 1200px) {}
-
-/*-- 768-992px col-lg --*/
-@media screen and (max-width: 992px) {}
-
-/*-- 575-768px col-lg --*/
-@media screen and (max-width: 768px) {}
-
-/*-- 420-575px col-lg --*/
-@media screen and (max-width: 575px) {}
-
-/*-- 320-420px col-lg --*/
-@media screen and (max-width: 420px) {}
