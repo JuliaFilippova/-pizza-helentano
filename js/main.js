@@ -1,4 +1,69 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+    // trigger-селектор кнопки по клику, modalSelector-модальное окно которые открываем, modalSelectorBody-содержимое окна, close - закрытие именно этого модального окна.
+    function bindModal(triggerSelector, modalSelector, modalSelectorBody, closeSelector, closeClickOverlay = true) {
+
+        const trigger = document.querySelectorAll(triggerSelector), //кнопки вызывающие модалку
+            modal = document.querySelector(modalSelector), // подложка модального окна 
+            modalBody = document.querySelector(modalSelectorBody), //модальное окно окошко
+            close = document.querySelectorAll(closeSelector); //закрытие модального
+
+        trigger.forEach(item => { //цикл, т.к. у нас будет в нескольких местах вызываться модальное окно
+            item.addEventListener('click', (e) => { //(e) если есть href#
+                if (e.target) {
+                    e.preventDefault();
+                }
+
+                modal.classList.add('modal-overlay-show'); //класс для плавного показа мод окна
+                modalBody.classList.add('modal-body-show'); //класс для плавного показа мод окна
+                document.body.style.overflow = 'hidden'; //убирает скролл
+            });
+        });
+        close.forEach(item => {
+
+            item.addEventListener('click', () => { //по клику на крестик закрываем окно
+
+                modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
+                modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
+                document.body.style.overflow = ''; //возвращает скролл
+            });
+        });
+
+        modal.addEventListener('click', (e) => { //по клику вне формы закрываем окно (подложка)
+            if (e.target === modal && closeClickOverlay) {
+
+                modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
+                modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
+                document.body.style.overflow = ''; //возвращает скролл
+            }
+        })
+    }
+    // запускаем функции модальных окон
+    bindModal('.type-product__card-wrap', '.modal-product-desc', '.modal-product-desc__body', '.close-modal'); //модальное окно по клику
+    bindModal('.fixed-icon-basket', '.modal-basket-goods', '.modal-basket-goods__body', '.close-modal');
+
+    // hamburger menu
+    function burgerMenu(selector) {
+        let menu = document.querySelector(selector),
+            buttonMenu = document.querySelector('.burger-menu__btn');
+
+        buttonMenu.addEventListener('click', (e) => {
+            if (e.target) {
+                e.preventDefault();
+            }
+            menu.classList.toggle('burger-menu__active');
+            document.body.classList.toggle('over-hid');
+        });
+
+        document.querySelector('.modal-window_burger').onclick = (e) => {
+            if (e.target.classList.contains('modal-window_burger')) {
+                menu.classList.remove('burger-menu__active');
+                document.body.classList.remove('over-hid');
+            }
+        }
+    }
+    burgerMenu('.burger-menu');
+
     // TABS  make-order
     const [tabs, tabsPanels] = [
         Array.from(document.querySelectorAll(".make-order-tab")),
@@ -20,70 +85,17 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+
     // лайтбокс галерея
     lightGallery(document.getElementById('lightgallery'));
 
-    // modal
-    // const startButton = document.querySelector(".card-btn-garbage"),
-    //     modalOverlay = document.querySelector(".modal-window"),
-    //     modalBody = document.querySelector(".modal-window__body");
 
-    // startButton.addEventListener("click", () => {
-    //     modalOverlay.classList.add("modal-overlay-show");
-    //     modalBody.classList.add("modal-body-show");
-
-    //     // Closing modal
-    //     document.addEventListener("keyup", (e) => {
-    //         if (e.keyCode === 27) {
-    //             modalOverlay.classList.remove("modal-overlay-show");
-    //             modalBody.classList.remove("modal-body-show");
-    //         }
-    //     });
-
-    //     modalOverlay.addEventListener("click", (e) => {
-    //         if (
-    //             e.target.classList.contains("close-modal") ||
-    //             e.target.classList.contains("modal-window")
-    //         ) {
-    //             modalOverlay.classList.remove("modal-overlay-show");
-    //             modalBody.classList.remove("modal-body-show");
-    //         }
-    //     })
-    // });
-
-});
-$(document).ready(function () {
-    $('.header-banner-slick').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        responsive: [{
-            breakpoint: 424,
-            settings: {}
-        }]
-    });
-
-    $('.product-selection-slider').slick({
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: true,
-        responsive: [{
-            breakpoint: 424,
-            settings: {}
-        }]
-    });
 });
 window.onload = function () {
     // загружаем карту, только после всей загрузки стр
     setTimeout(function () {
         document.getElementById('map').src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A6a8bbb978c51898afd590bea1a467bac4a3ecd6eb9a1b34fe5eb467b5f0beeef&amp;source=constructor';
-    }, 100);
+    }, 50);
 
 
     // плавная прокрутка до якоря
@@ -117,3 +129,88 @@ window.onload = function () {
         });
     });
 }
+// slider slick
+$(document).ready(function () {
+    $('.header-banner-slick').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [{
+            breakpoint: 424,
+            settings: {}
+        }]
+    });
+
+    $('.product-selection-slider').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 950,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 678,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        }, {
+            breakpoint: 530,
+            settings: {
+                arrows: false,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }]
+    });
+
+    // аккардеон в модальном окне
+    $('.add-products-drop__link').click(function () {
+        $('.add-products-drop__link').not(this).children('.drop-btn-open').removeClass('active');
+        $(this).children('.drop-btn-open').toggleClass("active");
+
+        if ($(this).parent().is('.drop_open')) {
+            $(this).closest('.add-products-drop__item').find('.add-products-drop__content').slideUp();
+            $(this).closest('.add-products-drop__item').removeClass('drop_open');
+        } else {
+            $('.add-products-drop__content').slideUp();
+            $('.add-products-drop__item').removeClass('drop_open');
+            $(this).closest('.add-products-drop__item').find('.add-products-drop__content').slideDown();
+            $(this).closest('.add-products-drop__item').addClass('drop_open');
+        }
+    });
+
+    // active btn
+    let selector = '.product-desc-info__centimeter';
+
+    $(selector).on('click', function () {
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+    });
+});
+// перемещение блока в другой при мобильном
+$(window).on('load resize', function () {
+    if ($(window).width() <= 1199) {
+        $('.block-resize').insertAfter('.block-resize-mobile');
+        $('.modal-addit-products__list_1').appendTo($('#dropResize1'));
+        $('.modal-addit-products__list_2').appendTo($('#dropResize2'));
+    }
+    if ($(window).width() <= 992) {
+        $('.product-desc-info h2').insertBefore('.modal-product-desc__img');
+    }
+});
