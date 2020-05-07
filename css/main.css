@@ -1002,13 +1002,30 @@ input::placeholder {
 	z-index: 3;
 }
 
-.sticker-like:before {
-	content: '❤';
+svg {
+	width: 20px;
+	height: 20px;
+}
+
+svg path {
+	fill: inherit;
+	stroke: inherit;
+	stroke-width: inherit;
+}
+
+.sticker-like svg {
+	fill: #D2D2D2;
+	width: 15px;
+	height: 15px;
 	position: absolute;
-	top: 4px;
-	right: 5px;
-	font-size: 14px;
-	color: #D2D2D2;
+	top: 57%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+svg:hover .like {
+	fill: #E42238;
+	opacity: .8;
 }
 
 .sticker-like:hover {
@@ -1016,19 +1033,12 @@ input::placeholder {
 	opacity: .8;
 }
 
-.sticker-like:hover:before {
-	color: #E42238 !important;
-	font-weight: 500;
-	opacity: .8;
-}
-
-.color-red_active-like {
+.active-like {
 	border: 0.5px solid #E42238;
 }
 
-.color-red_active-like:before {
-	color: #E42238 !important;
-	font-weight: 500;
+.active-like svg {
+	fill: #E42238;
 }
 
 /* BASKET - GOODS =========== */
