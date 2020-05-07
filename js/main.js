@@ -90,37 +90,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    // function burgerMenu(selector) {
-    //     let menu = document.querySelector(selector),
-    //         buttonMenu = document.querySelector('.burger-menu__btn'); //кнопка
-
-    //     buttonMenu.addEventListener('click', (e) => {
-    //         if (e.target) {
-    //             e.preventDefault();
-    //         }
-    //         menu.classList.toggle('burger-menu__active'); //активный класс, показываем меню
-    //         document.body.classList.toggle('over-hid'); //overflow hidden убирает скролл
-
-    //         //убирает скролл (для мобилки)
-    //         let scrollX = window.scrollX;
-    //         let scrollY = window.scrollY;
-    //         window.onscroll = function () {
-    //             window.scrollTo(scrollX, scrollY);
-    //         };
-    //     });
-
-    //     document.querySelector('.modal-window_burger').onclick = (e) => { //модальное окно меню
-    //         if (e.target.classList.contains('modal-window_burger')) { //модальное окно меню
-    //             menu.classList.remove('burger-menu__active'); //активный класс, скрываем меню
-    //             document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
-
-    //             //убирает скролл (для мобилки)
-    //             window.onscroll = function () {
-    //                 return;
-    //             };
-    //         }
-    //     }
-    // }
     burgerMenu('.burger-menu');
     // hamburger menu modal
 
@@ -222,8 +191,6 @@ $(document).ready(function () {
         speed: 800,
         slidesToShow: 6,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
         arrows: true,
         responsive: [{
             breakpoint: 1199,
