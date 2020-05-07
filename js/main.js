@@ -72,23 +72,29 @@ window.addEventListener('DOMContentLoaded', () => {
             document.body.classList.toggle('over-hid'); //overflow hidden убирает скролл
 
             //убирает скролл (для мобилки)
-            // let scrollX = window.scrollX;
-            // let scrollY = window.scrollY;
-            // window.onscroll = function () {
-            //     window.scrollTo(scrollX, scrollY);
-            // };
+            let scrollX = window.scrollX;
+            let scrollY = window.scrollY;
+            window.onscroll = function () {
+                window.scrollTo(scrollX, scrollY);
+            };
         });
 
         document.querySelector('.modal-window_burger').onclick = (e) => { //модальное окно меню
             if (e.target.classList.contains('modal-window_burger')) { //модальное окно меню
                 menu.classList.remove('burger-menu__active'); //активный класс, скрываем меню
                 document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
-
+                console.log(e.target.classList.contains('modal-window_burger'))
                 //убирает скролл (для мобилки)
-                // window.onscroll = function () {
-                //     return;
-                // };
+                window.onscroll = function () {
+                    return;
+                };
             }
+        }
+        buttonMenu.onclick = (e) => { //модальное окно меню
+            //убирает скролл (для мобилки)
+            window.onscroll = function () {
+                return;
+            };
         }
     }
     burgerMenu('.burger-menu');
