@@ -91,10 +91,12 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         buttonMenu.onclick = (e) => { //модальное окно меню
-            //убирает скролл (для мобилки)
-            window.onscroll = function () {
-                return;
-            };
+            if (e.target.classList.contains('burger-menu__active')) { //модальное окно меню
+                //убирает скролл (для мобилки)
+                window.onscroll = function () {
+                    return;
+                };
+            }
         }
     }
     burgerMenu('.burger-menu');
