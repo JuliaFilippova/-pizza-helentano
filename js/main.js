@@ -64,19 +64,20 @@ window.addEventListener('DOMContentLoaded', () => {
         let menu = document.querySelector(selector),
             buttonMenu = document.querySelector('.burger-menu__btn'); //кнопка
 
+        const scrollListener = () => window.scrollTo(0, 0);
+
         buttonMenu.addEventListener('click', (e) => {
             if (e.target) {
                 e.preventDefault();
             }
+
+            //убирает или добавляет скролл (для мобилки)
+            menu.classList.contains('burger-menu__active') ?
+                document.removeEventListener('scroll', scrollListener) :
+                document.addEventListener('scroll', scrollListener);
+
             menu.classList.toggle('burger-menu__active'); //активный класс, показываем меню
             document.body.classList.toggle('over-hid'); //overflow hidden убирает скролл
-
-            //убирает скролл (для мобилки)
-            let scrollX = window.scrollX;
-            let scrollY = window.scrollY;
-            window.onscroll = function () {
-                window.scrollTo(scrollX, scrollY);
-            };
         });
 
         document.querySelector('.modal-window_burger').onclick = (e) => { //модальное окно меню
@@ -85,12 +86,41 @@ window.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
 
                 //убирает скролл (для мобилки)
-                window.onscroll = function () {
-                    return;
-                };
+                document.removeEventListener('scroll', scrollListener);
             }
         }
     }
+    // function burgerMenu(selector) {
+    //     let menu = document.querySelector(selector),
+    //         buttonMenu = document.querySelector('.burger-menu__btn'); //кнопка
+
+    //     buttonMenu.addEventListener('click', (e) => {
+    //         if (e.target) {
+    //             e.preventDefault();
+    //         }
+    //         menu.classList.toggle('burger-menu__active'); //активный класс, показываем меню
+    //         document.body.classList.toggle('over-hid'); //overflow hidden убирает скролл
+
+    //         //убирает скролл (для мобилки)
+    //         let scrollX = window.scrollX;
+    //         let scrollY = window.scrollY;
+    //         window.onscroll = function () {
+    //             window.scrollTo(scrollX, scrollY);
+    //         };
+    //     });
+
+    //     document.querySelector('.modal-window_burger').onclick = (e) => { //модальное окно меню
+    //         if (e.target.classList.contains('modal-window_burger')) { //модальное окно меню
+    //             menu.classList.remove('burger-menu__active'); //активный класс, скрываем меню
+    //             document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
+
+    //             //убирает скролл (для мобилки)
+    //             window.onscroll = function () {
+    //                 return;
+    //             };
+    //         }
+    //     }
+    // }
     burgerMenu('.burger-menu');
     // hamburger menu modal
 
