@@ -612,6 +612,14 @@
         left: 13px;
     }
 
+    .burger-menu__nav li a {
+        padding: 8px 20px;
+    }
+
+    .burger-menu__nav {
+        padding: 10px;
+    }
+
     /* modal window */
     /* PAGE - INDEX - END ======================= */
 
