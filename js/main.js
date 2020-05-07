@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.add('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.add('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = 'hidden'; //убирает скролл
+                document.body.style.position = 'fixed'; //убирает скролл
             });
         });
         close.forEach(item => {
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = ''; //возвращает скролл
+                document.body.style.position = ''; //убирает скролл
             });
         });
 
@@ -35,6 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = ''; //возвращает скролл
+                document.body.style.position = ''; //убирает скролл
             }
         })
     }
@@ -131,15 +134,6 @@ window.onload = function () {
         });
     });
 
-    // Disable scrolling.
-    document.ontouchmove = function (e) {
-        e.preventDefault();
-    }
-
-    // Enable scrolling.
-    document.ontouchmove = function (e) {
-        return true;
-    }
 }
 // slider slick
 $(document).ready(function () {

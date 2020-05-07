@@ -141,6 +141,11 @@ button {
 	transition: .3s;
 }
 
+.over-hid {
+	overflow: hidden;
+	position: fixed;
+}
+
 input:focus,
 button:focus {
 	outline: none;
