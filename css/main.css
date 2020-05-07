@@ -509,6 +509,10 @@ input::placeholder {
 	height: 32px;
 }
 
+.btn-search svg:hover {
+	fill: #808080;
+}
+
 .page-data {
 	display: flex;
 	flex-direction: column;
@@ -865,17 +869,19 @@ input::placeholder {
 	border-color: #0891e621;
 }
 
-.select:after {
-	content: "";
+.select svg {
+	fill: #445548;
 	position: absolute;
-	top: 12px;
-	left: 19px;
-	display: block;
-	pointer-events: none;
-	background: url('../img/orientation1.svg') 0 0 no-repeat;
+	top: 11px;
+	left: 15px;
 	width: 17px;
 	height: 17px;
 	z-index: 5;
+	cursor: pointer;
+}
+
+.select svg:hover {
+	fill: #151515;
 }
 
 .select select {
