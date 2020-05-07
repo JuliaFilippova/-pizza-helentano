@@ -137,6 +137,62 @@
 @media screen and (max-width: 992px) {
 
     /* PAGE - INDEX ======================= */
+    /* шапка */
+    .mobile-none {
+        display: none;
+    }
+
+    .header-cap {
+        padding-bottom: 0;
+    }
+
+    .brand {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .burger-mobile {
+        display: block;
+    }
+
+    .brand img {
+        width: 90px;
+        height: 60px;
+        margin: 10px 0;
+    }
+
+    .brand-box {
+        width: 91px;
+    }
+
+    .under-record {
+        font-size: 10px;
+    }
+
+    .page-data {
+        margin-top: -15px;
+    }
+
+    .cap-panel-mobile {
+        background: #34B44A;
+        padding: 6px 0;
+    }
+
+    .search-input {
+        margin-top: 0;
+    }
+
+    .search {
+        padding: 10px 20px 9px;
+        background: white;
+        border: 0.5px solid #fff;
+    }
+
+    .btn-search {
+        top: 4px;
+    }
+
+    /* шапка */
     .container {
         max-width: 95% !important;
     }
@@ -217,63 +273,7 @@
         font-size: 28px;
     }
 
-    /* шапка */
-    .mobile-none {
-        display: none;
-    }
 
-    .header-cap {
-        padding-bottom: 0;
-    }
-
-    .brand {
-        margin: 10px 0;
-        display: block;
-    }
-
-    .burger-mobile {
-        display: block;
-    }
-
-    .brand img {
-        width: 90px;
-        height: 60px;
-        margin: 10px 0;
-    }
-
-    .brand-box {
-        width: 91px;
-    }
-
-    .under-record {
-        font-size: 10px;
-    }
-
-    .page-data {
-        margin-top: -15px;
-    }
-
-    .cap-panel-mobile {
-        background: #34B44A;
-        padding: 6px 0;
-        align-items: center;
-    }
-
-    .search-input {
-        margin-top: 0;
-    }
-
-    .search {
-        padding: 10px 20px 9px;
-        background: white;
-        border: 0.5px solid #fff;
-    }
-
-    .btn-search {
-        top: 4px;
-    }
-
-    /* шапка */
     .container {
         max-width: 100% !important;
     }

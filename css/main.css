@@ -143,7 +143,7 @@ button {
 
 .over-hid {
 	overflow: hidden;
-	position: fixed;
+	/* position: fixed; */
 }
 
 input:focus,

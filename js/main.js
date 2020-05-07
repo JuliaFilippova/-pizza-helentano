@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    let wrapper = document.querySelector('.wrapper');
     // ФУНКЦИЯ МОДАЛЬНОЕ ОКНО
     // trigger-селектор кнопки по клику, modalSelector-модальное окно которые открываем, modalSelectorBody-содержимое окна, close - закрытие именно этого модального окна.
     function bindModal(triggerSelector, modalSelector, modalSelectorBody, closeSelector, closeClickOverlay = true) {
@@ -17,7 +18,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.add('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.add('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = 'hidden'; //убирает скролл
-                document.body.style.position = 'fixed'; //убирает скролл
+                // document.body.style.position = 'fixed'; //убирает скролл
+
+                let scrollX = window.scrollX;
+                let scrollY = window.scrollY;
+                window.onscroll = function () {
+                    window.scrollTo(scrollX, scrollY);
+                };
             });
         });
         close.forEach(item => {
@@ -27,7 +34,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = ''; //возвращает скролл
-                document.body.style.position = ''; //убирает скролл
+                // document.body.style.position = ''; //убирает скролл
+
+                window.onscroll = function () {
+                    return;
+                };
             });
         });
 
@@ -37,7 +48,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = ''; //возвращает скролл
-                document.body.style.position = ''; //убирает скролл
+                // document.body.style.position = ''; //убирает скролл
+
+                window.onscroll = function () {
+                    return;
+                };
             }
         })
     }
@@ -58,12 +73,22 @@ window.addEventListener('DOMContentLoaded', () => {
             }
             menu.classList.toggle('burger-menu__active');
             document.body.classList.toggle('over-hid');
+
+            let scrollX = window.scrollX;
+            let scrollY = window.scrollY;
+            window.onscroll = function () {
+                window.scrollTo(scrollX, scrollY);
+            };
         });
 
         document.querySelector('.modal-window_burger').onclick = (e) => {
             if (e.target.classList.contains('modal-window_burger')) {
                 menu.classList.remove('burger-menu__active');
                 document.body.classList.remove('over-hid');
+
+                window.onscroll = function () {
+                    return;
+                };
             }
         }
     }
