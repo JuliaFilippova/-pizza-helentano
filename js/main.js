@@ -130,6 +130,16 @@ window.onload = function () {
             }, animationTime / framesCount);
         });
     });
+
+    // Disable scrolling.
+    document.ontouchmove = function (e) {
+        e.preventDefault();
+    }
+
+    // Enable scrolling.
+    document.ontouchmove = function (e) {
+        return true;
+    }
 }
 // slider slick
 $(document).ready(function () {
