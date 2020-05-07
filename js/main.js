@@ -62,15 +62,16 @@ window.addEventListener('DOMContentLoaded', () => {
     // hamburger menu modal
     function burgerMenu(selector) {
         let menu = document.querySelector(selector),
-            buttonMenu = document.querySelector('.burger-menu__btn');
+            buttonMenu = document.querySelector('.burger-menu__btn'); //кнопка
 
         buttonMenu.addEventListener('click', (e) => {
             if (e.target) {
                 e.preventDefault();
             }
-            menu.classList.toggle('burger-menu__active');
-            document.body.classList.toggle('over-hid');
-            //убирает скролл
+            menu.classList.toggle('burger-menu__active'); //активный класс, показываем меню
+            document.body.classList.toggle('over-hid'); //overflow hidden убирает скролл
+
+            //убирает скролл (для мобилки)
             let scrollX = window.scrollX;
             let scrollY = window.scrollY;
             window.onscroll = function () {
@@ -78,11 +79,12 @@ window.addEventListener('DOMContentLoaded', () => {
             };
         });
 
-        document.querySelector('.modal-window_burger').onclick = (e) => {
-            if (e.target.classList.contains('modal-window_burger')) {
-                menu.classList.remove('burger-menu__active');
-                document.body.classList.remove('over-hid');
-                //убирает скролл
+        document.querySelector('.modal-window_burger').onclick = (e) => { //модальное окно меню
+            if (e.target.classList.contains('modal-window_burger')) { //модальное окно меню
+                menu.classList.remove('burger-menu__active'); //активный класс, скрываем меню
+                document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
+
+                //убирает скролл (для мобилки)
                 window.onscroll = function () {
                     return;
                 };
@@ -129,8 +131,8 @@ window.onload = function () {
     // плавная прокрутка до якоря
     // собираем все якоря; устанавливаем время анимации и количество кадров
     const anchors = [].slice.call(document.querySelectorAll('a[data-scroll]')),
-        animationTime = 1000,
-        framesCount = 100;
+        animationTime = 500,
+        framesCount = 50;
     anchors.forEach(function (item) {
         // каждому якорю присваиваем обработчик события
         item.addEventListener('click', function (e) {
@@ -163,9 +165,11 @@ $(document).ready(function () {
     $('.header-banner-slick').slick({
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 900,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3500,
         arrows: false,
         responsive: [{
             breakpoint: 424,
@@ -175,10 +179,12 @@ $(document).ready(function () {
     // СЛАЙДЕР С КАРТОЧКАМИ ТОВАРОВ
     $('.product-selection-slider').slick({
         dots: false,
-        infinite: false,
-        speed: 500,
+        infinite: true,
+        speed: 800,
         slidesToShow: 6,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         arrows: true,
         responsive: [{
             breakpoint: 1199,

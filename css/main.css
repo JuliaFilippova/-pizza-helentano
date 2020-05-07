@@ -180,6 +180,8 @@ input::placeholder {
 	visibility: hidden;
 	transition: .5s;
 	z-index: 9;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .burger-mobile {
