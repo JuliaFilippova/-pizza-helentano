@@ -350,7 +350,7 @@
     /* PAGE - INDEX - END ======================= */
 
     /* PAGE - FORM ======================= */
-    .form-pointer p {
+    .form-pointer span {
         font-size: 12px;
     }
 

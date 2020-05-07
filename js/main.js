@@ -18,8 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.add('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.add('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = 'hidden'; //убирает скролл
-                // document.body.style.position = 'fixed'; //убирает скролл
-
+                //убирает скролл
                 let scrollX = window.scrollX;
                 let scrollY = window.scrollY;
                 window.onscroll = function () {
@@ -34,8 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = ''; //возвращает скролл
-                // document.body.style.position = ''; //убирает скролл
-
+                //убирает скролл
                 window.onscroll = function () {
                     return;
                 };
@@ -48,8 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('modal-overlay-show'); //класс для плавного показа мод окна
                 modalBody.classList.remove('modal-body-show'); //класс для плавного показа мод окна
                 document.body.style.overflow = ''; //возвращает скролл
-                // document.body.style.position = ''; //убирает скролл
-
+                //убирает скролл
                 window.onscroll = function () {
                     return;
                 };
@@ -73,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
             menu.classList.toggle('burger-menu__active');
             document.body.classList.toggle('over-hid');
-
+            //убирает скролл
             let scrollX = window.scrollX;
             let scrollY = window.scrollY;
             window.onscroll = function () {
@@ -85,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (e.target.classList.contains('modal-window_burger')) {
                 menu.classList.remove('burger-menu__active');
                 document.body.classList.remove('over-hid');
-
+                //убирает скролл
                 window.onscroll = function () {
                     return;
                 };
