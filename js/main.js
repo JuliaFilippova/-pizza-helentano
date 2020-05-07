@@ -1,3 +1,5 @@
+const disableScrollListener = () => window.scrollTo(0, 0);
+
 window.addEventListener('DOMContentLoaded', () => {
     let wrapper = document.querySelector('.wrapper');
     // ФУНКЦИЯ МОДАЛЬНОЕ ОКНО
@@ -64,8 +66,6 @@ window.addEventListener('DOMContentLoaded', () => {
         let menu = document.querySelector(selector),
             buttonMenu = document.querySelector('.burger-menu__btn'); //кнопка
 
-        const scrollListener = () => window.scrollTo(0, 0);
-
         buttonMenu.addEventListener('click', (e) => {
             if (e.target) {
                 e.preventDefault();
@@ -73,8 +73,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
             //убирает или добавляет скролл (для мобилки)
             menu.classList.contains('burger-menu__active') ?
-                document.removeEventListener('scroll', scrollListener) :
-                document.addEventListener('scroll', scrollListener);
+                document.removeEventListener('scroll', disableScrollListener) :
+                document.addEventListener('scroll', disableScrollListener);
 
             menu.classList.toggle('burger-menu__active'); //активный класс, показываем меню
             document.body.classList.toggle('over-hid'); //overflow hidden убирает скролл
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
 
                 //убирает скролл (для мобилки)
-                document.removeEventListener('scroll', scrollListener);
+                document.removeEventListener('scroll', disableScrollListener);
             }
         }
     }
@@ -155,7 +155,10 @@ window.addEventListener('DOMContentLoaded', () => {
 window.onload = function () {
     // ОТОЖЕННАЯ ЗАГРУЗКА КАРТЫ(загружаем карту, только после всей загрузки стр)
     setTimeout(function () {
-        document.getElementById('map').src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A6a8bbb978c51898afd590bea1a467bac4a3ecd6eb9a1b34fe5eb467b5f0beeef&amp;source=constructor';
+        if (document.getElementById('map')) {
+            document.getElementById('map')
+                .src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A6a8bbb978c51898afd590bea1a467bac4a3ecd6eb9a1b34fe5eb467b5f0beeef&amp;source=constructor';
+        }
     }, 50);
 
     // плавная прокрутка до якоря
@@ -167,6 +170,12 @@ window.onload = function () {
         // каждому якорю присваиваем обработчик события
         item.addEventListener('click', function (e) {
             e.preventDefault();
+
+            // Вернуть скролл закрыть меню если открыто
+            document.removeEventListener('scroll', disableScrollListener);
+            document.querySelector('.burger-menu').classList.remove('burger-menu__active'); //активный класс, скрываем меню
+            document.body.classList.remove('over-hid'); //overflow hidden возвращает скролл
+
             // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
             let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
             // запускаем интервал, в котором
