@@ -17,14 +17,6 @@
     }
 
     /* PAGE - INDEX - END ======================= */
-
-    /* PAGE - ABOUT ======================= */
-
-
-    /* PAGE - ABOUT - END ======================= */
-
-    /* PAGE - FORM ======================= */
-    /* PAGE - FORM - END ======================= */
 }
 
 /*-- 993-1200px col-lg --*/
@@ -116,16 +108,14 @@
         left: 20px;
     }
 
-    /* modal - window */
-    /* PAGE - INDEX - END ======================= */
-
-    /* PAGE - ABOUT ======================= */
-    /* PAGE - ABOUT - END ======================= */
-
-    /* PAGE - FORM ======================= */
     .modal-basket-goods__body {
         width: 55%;
     }
+
+    /* modal - window */
+    /* PAGE - INDEX - END ======================= */
+
+    /* PAGE - FORM ======================= */
 
     .basket-goods_make-order {
         margin-top: 0;
@@ -138,10 +128,6 @@
 
     .form-pointer {
         margin: 0 auto;
-    }
-
-    .container-radio .checkmark:after {
-        left: 4px;
     }
 
     /* PAGE - FORM - END ======================= */
@@ -221,13 +207,6 @@
     }
 
     /* modal - window */
-    /* PAGE - INDEX - END ======================= */
-
-    /* PAGE - ABOUT ======================= */
-    /* PAGE - ABOUT - END ======================= */
-
-    /* PAGE - FORM ======================= */
-    /* PAGE - FORM - END ======================= */
 }
 
 /*-- 576-768px col-lg --*/
@@ -347,6 +326,7 @@
     }
 
     /* modal - window */
+
     .modal-product-desc__box_amount {
         position: relative;
         padding-top: 45px;
@@ -369,16 +349,9 @@
     /* modal - window */
     /* PAGE - INDEX - END ======================= */
 
-    /* PAGE - ABOUT ======================= */
-    /* PAGE - ABOUT - END ======================= */
-
     /* PAGE - FORM ======================= */
     .form-pointer p {
         font-size: 12px;
-    }
-
-    .container-radio .checkmark:after {
-        left: 3px;
     }
 
     /* PAGE - FORM - END ======================= */
@@ -441,6 +414,7 @@
     }
 
     /* modal - window */
+
     .modal-window__body_right {
         padding: 15px 10px 15px;
     }
@@ -457,26 +431,8 @@
         font-size: 20px;
     }
 
-    /* .amount-btn-block .minus:before,
-    .amount-btn-block .plus:before {
-        top: 1px;
-        left: 0px;
-        width: 22px;
-        height: 22px;
-    }
-
-    .amount-btn-block .minus i,
-    .amount-btn-block .plus i {
-        font-size: 16px;
-    }
-
-    .amount-btn-block .number {
-        margin: 0 10px;
-    }
-
-    .amount-btn-block .number {
-        font-size: 18px;
-    } */
+    .form-addit-products__quantity .minus:before,
+    .form-addit-products__quantity .plus:before,
     .modal-addit-products__quantity .minus:before,
     .modal-addit-products__quantity .plus:before {
         top: -1px;
@@ -495,6 +451,11 @@
         font-size: 20px;
     }
 
+    .form-addit-products__item {
+        align-items: center;
+        font-size: 16px;
+    }
+
     .modal-addit-products__item {
         margin-bottom: 17px;
         align-items: center;
@@ -507,28 +468,29 @@
         height: 180px;
     }
 
-    .product-desc-info__centimeters-wrap {
-        justify-content: space-between;
-    }
-
-    .product-desc-info__centimeter {
-        width: 120px;
-        margin-right: 0;
-    }
-
-    .product-desc-info__centimeter.active:before {
-        top: 16px;
-        left: 13px;
-    }
-
     .addit-products-price {
         margin-left: 5px;
         width: 100px;
         text-align: end;
     }
 
-    /* modal - window */
+    .modal-message-sent__body {
+        width: 95%;
+    }
 
+    .product-desc-info__centimeter {
+        width: 145px;
+    }
+
+    .product-desc-info__centimeter:first-child {
+        margin-right: 5px;
+    }
+
+    .product-desc-info__centimeter:last-child {
+        margin-left: 5px;
+    }
+
+    /* modal - window */
     /* PAGE - INDEX - END ======================= */
 
     /* PAGE - ABOUT ======================= */
@@ -594,6 +556,10 @@
         font-size: 20px;
     }
 
+    p {
+        font-size: 14px;
+    }
+
     .burger-menu__nav {
         padding: 15px 0 15px;
     }
@@ -636,6 +602,17 @@
         font-size: 15px;
     }
 
+    /* modal window */
+    .product-desc-info__centimeter {
+        width: 120px;
+    }
+
+    .product-desc-info__centimeter.active:before {
+        top: 16px;
+        left: 13px;
+    }
+
+    /* modal window */
     /* PAGE - INDEX - END ======================= */
 
     /* PAGE - ABOUT ======================= */
@@ -655,10 +632,6 @@
 
     .map iframe {
         height: 320px;
-    }
-
-    p {
-        font-size: 14px;
     }
 
     /* PAGE - ABOUT - END ======================= */
@@ -716,7 +689,6 @@
     }
 
     /* PAGE - INDEX - END ======================= */
-
 }
 
 @media only screen and (max-height: 800px) {

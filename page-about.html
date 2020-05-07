@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас | Chelentano</title>
+    <title>Chelentano</title>
     <!-- META Search -->
     <meta name="description" content="Итальянская пицца, Суши и роллы, Закуски, Салаты, Десерты, Напитки">
     <meta name="keywords" content="Пицца, роллы - БЕСПЛАТНАЯ ДОСТАВКА">
@@ -15,11 +15,8 @@
     <meta property="og:image" content="img/meta-preview.png">
     <meta property="og:site_name" content="PIZZA-Chelentano">
     <!-- FAVICON-->
-    <!-- <link rel="icon" href="img/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
-    <!-- FONTAWESOME -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"> -->
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <!-- FONT FAMILY Rubik 400 500, ROBOTO 500, OpenSans 400ital 700 800 -->
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;0,800;1,400&family=Roboto:wght@500&family=Rubik:wght@400;500&display=swap"
@@ -29,14 +26,15 @@
     <!-- Slick-slider CSS -->
     <link rel="stylesheet" href="css/slick.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/lightgallery.min.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body>
     <header class="header" id="header">
+        <!-- шапка сайта -->
         <div class="header-cap">
             <div class="container">
                 <div class="row align-items-center">
@@ -106,6 +104,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- панель на мобильном разрешении -->
                 <div class="row cap-panel-mobile">
                     <div class="col-3">
                         <!-- гамбургер меню, мобильное разрешение -->
@@ -137,6 +136,7 @@
                 </div>
             </div>
         </div>
+        <!-- шапка сайта /-->
     </header>
     <section class="about" id="about">
         <div class="container">
@@ -233,6 +233,7 @@
             </div>
         </div>
     </section>
+    <!-- footer -->
     <footer class="footer" id="footer">
         <div class="container">
             <div class="row">
@@ -363,11 +364,11 @@
     </div>
     <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ОПИССАНИЯ ПРОДУКТА -->
     <div class="modal-window modal-product-desc">
-        <div class="modal-window__body modal-product-desc__body">
+        <div class="modal-window__body modal-product-desc__body modal-window__body_right">
             <div class="close close-modal"></div>
             <div class="modal-product-desc__box">
                 <div class="modal-product-desc__img">
-                    <img src="img/test1.jpg" alt="Изображение">
+                    <img src="img/Ellipse1-2-min.png" alt="Изображение">
                 </div>
                 <div class="product-desc-info">
                     <h2>Пепперони острая</h2>
@@ -385,24 +386,23 @@
                         </p>
                     </div>
                     <div class="product-desc-info__centimeters-wrap">
-                        <span class="product-desc-info__centimeter active-tab">
-                            <i class="check"></i>
+                        <span class="product-desc-info__centimeter active">
                             30 см
                         </span>
                         <span class="product-desc-info__centimeter">
-                            <!-- <i class="check"></i> -->
                             45 см
                         </span>
                     </div>
                 </div>
             </div>
-            <div class="modal-product-desc__box modal-product-desc__box_border">
+            <!-- скрывается на разрешении меньше 1200 -->
+            <div class="modal-product-desc__box modal-product-desc__box_border addit-products__none-mobile">
                 <div class="modal-addit-products">
                     <span class="modal-addit-products__title">
                         Ингредиенты
                     </span>
                     <div class="modal-addit-products__list-wrap">
-                        <ul class="modal-addit-products__list modal-addit-products__list_col1">
+                        <ul class="modal-addit-products__list modal-addit-products__list_1">
                             <li class="modal-addit-products__item">
                                 <div class="modal-addit-products__quantity">
                                     <span class="minus"> <i>-</i> </span>
@@ -458,7 +458,7 @@
                                 <span class="addit-products-price">+ 20 ₽</span>
                             </li>
                         </ul>
-                        <ul class="modal-addit-products__list modal-addit-products__list_col2">
+                        <ul class="modal-addit-products__list modal-addit-products__list_1">
                             <li class="modal-addit-products__item">
                                 <div class="modal-addit-products__quantity">
                                     <span class="minus"> <i>-</i> </span>
@@ -520,7 +520,7 @@
                     <span class="modal-addit-products__title">
                         Напитки
                     </span>
-                    <ul class="modal-addit-products__list">
+                    <ul class="modal-addit-products__list modal-addit-products__list_2">
                         <li class="modal-addit-products__item">
                             <div class="modal-addit-products__quantity">
                                 <span class="minus"> <i>-</i> </span>
@@ -578,25 +578,131 @@
                     </ul>
                 </div>
             </div>
+            <!-- аккардеон показывается на разрешении меньше 1200 -->
+            <ul class="add-products-drop">
+                <li class="add-products-drop__item">
+                    <div class="add-products-drop__link drop_open">
+                        <span class="drop-btn-open"> + </span>
+                        <a>
+                            Ингредиенты
+                        </a>
+                    </div>
+                    <div class="add-products-drop__content" id="dropResize1"></div>
+                </li>
+                <li class="add-products-drop__item">
+                    <div class="add-products-drop__link drop_open">
+                        <span class="drop-btn-open"> + </span>
+                        <a>
+                            Напитки
+                        </a>
+                    </div>
+                    <div class="add-products-drop__content" id="dropResize2"></div>
+                </li>
+            </ul>
+            <!-- аккардеон -->
             <div class="modal-product-desc__box modal-product-desc__box_amount">
                 <div class="amount-block">
                     <span class="under-record">Итого:</span>
                     <span class="amount">790 ₽</span>
                 </div>
                 <div class="amount-btn-block">
-                    <div class="modal-addit-products__quantity">
+                    <div
+                        class="modal-addit-products__quantity modal-addit-products__quantity_absolute align-items-center">
                         <span class="minus"> <i>—</i> </span>
                         <span class="number">0</span>
                         <span class="plus"> <i>+</i> </span>
                     </div>
-                    <button class="btn btn-active">Добавлено в корзину</button>
+                    <button class="btn">В корзину</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- корзина товаров по клику на фикс иконку -->
+    <div class="modal-window modal-basket-goods">
+        <div class="modal-window__body modal-basket-goods__body modal-window__body_right">
+            <div class="close close-modal"></div>
+            <!-- пустая корзина d-none-->
+            <div class="empty-basket d-none">
+                <img src="img/pizza-min.png" alt="">
+                <h5>Ваша корзина пуста!</h5>
+                <p class="under-record">Вы пока не выбрали <br>
+                    ни одного блюда.</p>
+            </div>
+            <!-- полная корзина -->
+            <div class="full-basket">
+                <div class="full-basket__content">
+                    <div class="full-basket__title mini-headline">
+                        Ваш заказ
+                    </div>
+                    <ul class="selected-items-wrap">
+                        <!-- один выбранный продукт -->
+                        <li class="selected-item">
+                            <!-- картинка продукта -->
+                            <div class="selected-item__img">
+                                <img src="img/Ellipse1-min.png" alt="">
+                            </div>
+                            <div class="selected-item__info">
+                                <!-- название продукта -->
+                                <div class="selected-item__name mini-headline">
+                                    Пепперони острая
+                                </div>
+                                <!-- дополнительное описание продукта -->
+                                <div class="selected-item__desc">
+                                    <span class="selected-item__size">30 см</span> + <span
+                                        class="selected-item__add">Доп.
+                                        ингредиенты</span>
+                                </div>
+                                <!-- кол-во и цена продукта -->
+                                <div class="selected-item__desc">
+                                    <span class="selected-item__quantity">x1</span>
+                                    <span class="selected-item__price">590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="close-delete close"></div>
+                        </li>
+                        <li class="selected-item">
+                            <!-- картинка продукта -->
+                            <div class="selected-item__img">
+                                <img src="img/Ellipse1-min.png" alt="">
+                            </div>
+                            <div class="selected-item__info">
+                                <!-- название продукта -->
+                                <div class="selected-item__name mini-headline">
+                                    Пепперони острая
+                                </div>
+                                <!-- дополнительное описание продукта -->
+                                <div class="selected-item__desc">
+                                    <span class="selected-item__size">30 см</span> + <span
+                                        class="selected-item__add">Доп.
+                                        ингредиенты</span>
+                                </div>
+                                <!-- кол-во и цена продукта -->
+                                <div class="selected-item__desc">
+                                    <span class="selected-item__quantity">x1</span>
+                                    <span class="selected-item__price">590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="close-delete close"></div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="page-form.html" class="order-goods btn btn-active">Оформить заказ</a>
+            </div>
+        </div>
+    </div>
+    <!-- сообщение после отправки формы -->
+    <div class="modal-window modal-message-sent">
+        <div class="modal-window__body modal-message-sent__body">
+            <h5>Спасибо что выбрали нас!</h5>
+            <span class="your-order">Ваш заказ №1267</span>
+            <img src="img/cooking1.svg" alt="Изображение">
+            <span class="modal-text">Наш оператор доставки свяжется с Вами в ближайшее время!</span>
+            <a href="index.html" class="btn btn-active">Вернуться на главную</a>
+        </div>
+    </div>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/lightgallery.min.js"></script>
-    <!-- <script src="js/jquery.maskedinput.js"></script> -->
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/* ШРИФТЫ
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Rubik', sans-serif; 
+*/
 
 body {
 	font-family: 'Rubik', sans-serif;
@@ -13,9 +18,6 @@ body {
 	overflow-x: hidden;
 }
 
-/* font-family: 'Roboto', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Rubik', sans-serif; */
 body,
 p,
 ul,
@@ -111,6 +113,10 @@ img {
 	display: block;
 }
 
+header {
+	flex-grow: 1;
+}
+
 button {
 	background: transparent;
 	border: none;
@@ -155,7 +161,7 @@ input::placeholder {
 	opacity: 0.5;
 }
 
-/* burger-menu ========== */
+/* burger-menu modal ========== */
 .modal-window_burger {
 	position: fixed;
 	top: 0;
@@ -311,7 +317,7 @@ input::placeholder {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-	border: 5px solid #34b44a63;
+	border: 1px solid #34b44a63;
 	-webkit-animation: pulsing 2s infinite;
 	animation: pulsing 2s infinite;
 	z-index: -1;
@@ -325,11 +331,10 @@ input::placeholder {
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	border: 7px solid #34b44ab3;
+	border: 1.5px solid #34b44a63;
 	-webkit-animation: pulsing 2s infinite;
 	animation: pulsing 2s infinite;
 	z-index: -1;
-
 }
 
 .fixed-icon-basket .icon-basket {
@@ -393,10 +398,7 @@ input::placeholder {
 }
 
 /* FIXED-ICON ===== */
-header {
-	flex-grow: 1;
-}
-
+/* повторные стили */
 .under-record {
 	font-size: 12px;
 	line-height: 14px;
@@ -443,7 +445,6 @@ header {
 .close {
 	width: 20px;
 	height: 20px;
-	/* position: relative; */
 	cursor: pointer;
 	position: absolute;
 	right: 25px;
@@ -471,6 +472,8 @@ header {
 	background: rgba(68, 85, 72, 0.6);
 	transform: rotate(-45deg);
 }
+
+/* CLOSE ======= */
 
 /* HEADER =============================== */
 .header-cap {
@@ -576,7 +579,6 @@ header {
 }
 
 /* HEADER - BANNER =============================== */
-
 /* slick-slider */
 .header-banner-slick {
 	position: relative;
@@ -716,6 +718,7 @@ header {
 	background: url('../img/right-arrow.svg') 0 0 no-repeat;
 }
 
+/* SLICK ======== */
 /* PRODUCT - SELECTION =============================== */
 .product-selection-slider-wrap {
 	background: #F7F7F7;
@@ -835,10 +838,6 @@ header {
 	margin-right: 10px;
 }
 
-/* .type-product__tab:nth-child(5) {
-	margin-right: 0;
-} */
-
 .type-product__tab {
 	border: 0.5px solid #CCCCCC;
 	border-radius: 8px;
@@ -927,13 +926,8 @@ header {
 }
 
 .type-product__card-img img {
-	/* position: absolute; */
 	max-width: 200px;
-	/* height: 200px; */
 	object-fit: contain;
-	/* top: -15px;
-	left: 50%;
-	transform: translate(-50%, 0); */
 }
 
 .type-product__card-name,
@@ -1176,13 +1170,6 @@ header {
 	color: 464646;
 }
 
-
-
-/* HEADER =============================== */
-/* HEADER =============================== */
-/* HEADER =============================== */
-/* HEADER =============================== */
-
 /* FOOTER =============================== */
 .footer {
 	background: #34B44A;
@@ -1286,10 +1273,8 @@ header {
 }
 
 /* MODAL - WINDOW =============================== */
-
 /* modal-product-desc ===== */
 .modal-window {
-	/* display: none; */
 	opacity: 0;
 	visibility: hidden;
 	position: fixed;
@@ -1301,12 +1286,12 @@ header {
 	height: 100%;
 	background: rgba(50, 30, 30, 0.33);
 	z-index: 999;
+	transition: .5s;
 }
 
 .modal-window__body {
 	opacity: 0;
 	visibility: hidden;
-	/* display: none; */
 	position: fixed;
 	top: 60%;
 	left: 50%;
@@ -1317,6 +1302,7 @@ header {
 	border-radius: 16px;
 	z-index: 11;
 	padding: 30px 15px 15px;
+	transition: .5s;
 }
 
 .modal-overlay-show {
@@ -1550,7 +1536,7 @@ header {
 }
 
 /* полоса прокрутки (скроллбар) */
-.modal-product-desc__body {
+.modal-window__body {
 	overflow-y: auto;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
@@ -1560,23 +1546,17 @@ header {
 	overflow-scrolling: touch;
 }
 
-.modal-product-desc__body::-webkit-scrollbar {
+.modal-window__body::-webkit-scrollbar {
 	-webkit-appearance: none;
 	width: 7px;
 }
 
-.modal-product-desc__body::-webkit-scrollbar-thumb {
+.modal-window__body::-webkit-scrollbar-thumb {
 	border-radius: 20px;
 	background-color: #9d9d9d;
 }
 
-
-
-
-
-
-
-
+/* Аккардеон в модальном окне на мобильном разрешении */
 .add-products-drop {
 	display: none;
 }

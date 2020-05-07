@@ -110,14 +110,10 @@
     width: 26%;
 }
 
-/* .input-row_contacts input:nth-child(1) {
-    width: 48%;
-} */
 .input-row_contacts input:nth-child(1),
 .input-row_contacts input:nth-child(2) {
     width: 48.3%;
 }
-
 
 .form-pointer p {
     font-size: 14px;
@@ -181,6 +177,7 @@ textarea {
 .container-radio input {
     position: absolute;
     opacity: 0;
+    display: none;
     cursor: pointer;
 }
 
@@ -211,8 +208,9 @@ textarea {
 }
 
 .container-radio .checkmark:after {
-    top: 3px;
-    left: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 9px;
     height: 9px;
     border-radius: 50%;

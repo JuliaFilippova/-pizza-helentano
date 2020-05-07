@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-
+    // ФУНКЦИЯ МОДАЛЬНОЕ ОКНО
     // trigger-селектор кнопки по клику, modalSelector-модальное окно которые открываем, modalSelectorBody-содержимое окна, close - закрытие именно этого модального окна.
     function bindModal(triggerSelector, modalSelector, modalSelectorBody, closeSelector, closeClickOverlay = true) {
 
@@ -41,8 +41,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // запускаем функции модальных окон
     bindModal('.type-product__card-wrap', '.modal-product-desc', '.modal-product-desc__body', '.close-modal'); //модальное окно по клику
     bindModal('.fixed-icon-basket', '.modal-basket-goods', '.modal-basket-goods__body', '.close-modal');
+    // ФУНКЦИЯ МОДАЛЬНОЕ ОКНО 
 
-    // hamburger menu
+
+    // hamburger menu modal
     function burgerMenu(selector) {
         let menu = document.querySelector(selector),
             buttonMenu = document.querySelector('.burger-menu__btn');
@@ -63,6 +65,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     burgerMenu('.burger-menu');
+    // hamburger menu modal
+
 
     // TABS  make-order
     const [tabs, tabsPanels] = [
@@ -84,19 +88,18 @@ window.addEventListener('DOMContentLoaded', () => {
             item.find((e) => e.classList.contains("active")).classList.remove("active");
         });
     };
-
+    // TABS  make-order
 
     // лайтбокс галерея
     lightGallery(document.getElementById('lightgallery'));
-
-
 });
+
+
 window.onload = function () {
-    // загружаем карту, только после всей загрузки стр
+    // ОТОЖЕННАЯ ЗАГРУЗКА КАРТЫ(загружаем карту, только после всей загрузки стр)
     setTimeout(function () {
         document.getElementById('map').src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A6a8bbb978c51898afd590bea1a467bac4a3ecd6eb9a1b34fe5eb467b5f0beeef&amp;source=constructor';
     }, 50);
-
 
     // плавная прокрутка до якоря
     // собираем все якоря; устанавливаем время анимации и количество кадров
@@ -106,7 +109,6 @@ window.onload = function () {
     anchors.forEach(function (item) {
         // каждому якорю присваиваем обработчик события
         item.addEventListener('click', function (e) {
-            // убираем стандартное поведение
             e.preventDefault();
             // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
             let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
@@ -131,6 +133,7 @@ window.onload = function () {
 }
 // slider slick
 $(document).ready(function () {
+    // ГЛАВНЫЙ СЛАЙДЕР
     $('.header-banner-slick').slick({
         dots: true,
         infinite: true,
@@ -143,7 +146,7 @@ $(document).ready(function () {
             settings: {}
         }]
     });
-
+    // СЛАЙДЕР С КАРТОЧКАМИ ТОВАРОВ
     $('.product-selection-slider').slick({
         dots: false,
         infinite: false,
@@ -195,7 +198,7 @@ $(document).ready(function () {
         }
     });
 
-    // active btn
+    // активная кнопка по клику
     let selector = '.product-desc-info__centimeter';
 
     $(selector).on('click', function () {
@@ -203,7 +206,7 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
-// перемещение блока в другой при мобильном
+// перемещение блока в другой блок на мобильном разрешении
 $(window).on('load resize', function () {
     if ($(window).width() <= 1199) {
         $('.block-resize').insertAfter('.block-resize-mobile');
