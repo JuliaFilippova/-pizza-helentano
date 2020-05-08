@@ -1,6 +1,33 @@
 const disableScrollListener = () => window.scrollTo(0, 0);
 
 window.addEventListener('DOMContentLoaded', () => {
+    // preloder 
+    let preloader = document.querySelector('.preloader');
+    let images = document.images;
+    let imgTotalCount = images.length;
+    let imgLoadCount = 0;
+    document.body.style.overflow = 'hidden';
+    for (let i = 0; i < imgTotalCount; i++) {
+        let imgClone = new Image();
+        imgClone.onload = imageLoaded;
+        imgClone.onerror = imageLoaded;
+        imgClone.src = images[i].src;
+    }
+
+    function imageLoaded() {
+        imgLoadCount++;
+        (((100 / imgTotalCount) * imgLoadCount) << 0) + '%';
+        setTimeout(function () {
+            if (imgLoadCount >= imgTotalCount) {
+                if (!preloader.classList.contains('done')) {
+                    preloader.classList.add('done');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }, 1000)
+    }
+
+
     let wrapper = document.querySelector('.wrapper');
     // ФУНКЦИЯ МОДАЛЬНОЕ ОКНО
     // trigger-селектор кнопки по клику, modalSelector-модальное окно которые открываем, modalSelectorBody-содержимое окна, close - закрытие именно этого модального окна.
