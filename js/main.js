@@ -275,10 +275,5 @@ $(document).ready(function () {
 $(window).on('load resize', function () {
     if ($(window).width() <= 1199) {
         $('.block-resize').insertAfter('.block-resize-mobile');
-        $('.modal-addit-products__list_1').appendTo($('#dropResize1'));
-        $('.modal-addit-products__list_2').appendTo($('#dropResize2'));
-    }
-    if ($(window).width() <= 992) {
-        $('.product-desc-info h2').insertBefore('.modal-product-desc__img');
     }
 });
